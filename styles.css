@@ -24,6 +24,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'newRodin', Arial, Helvetica, sans-serif;
 }
 
 .break {
@@ -117,7 +118,6 @@ i {
 
 body {
     background-color: #e74200da;
-    font-family: 'newRodin', Arial, Helvetica, sans-serif;
 }
 
 h1 {
@@ -238,7 +238,7 @@ h1 {
     }
 }
 
-@media (max-width:829px) {
+@media (max-width:850px) {
     h1 {
         font-size: 60px;
         line-height: 2;
