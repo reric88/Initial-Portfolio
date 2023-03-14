@@ -32,35 +32,45 @@
     height: 0%;
 }
 
-nav {
-    position: fixed;
-    top: 0;
+#main-header {
     width: 100%;
+    display: flex;
+    background-color: #000;
+    border: 1px solid green;
 }
 
-#ul-head {
+#main-nav {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 10;
+    background-color: black;
+    border: 1px solid blue;
+}
+
+.ul-head {
     list-style-type: none;
     margin: 0;
     padding: 0;
     height: 60px;
     overflow: hidden;
     background-color: #000;
+    border: 1px solid white;
 }
 
-#ul-head li{
+.ul-head li{
     display: inline;
     float: left;
 }
 
-#ul-head .li-float {
-    /* float: right; */
-    /* margin-right: 30px; */
+.ul-head .li-float {
+    justify-self: flex-end;
 }
 
 
 
 
-#ul-head li a, .drop-btn {
+.ul-head li a, .drop-btn {
     display:block;
     color: white;
     text-align: center;
@@ -68,7 +78,7 @@ nav {
     text-decoration: none;
 }
 
-#ul-head li a:hover, .drop-down:hover .drop-btn {
+.ul-head li a:hover, .drop-down:hover .drop-btn {
     background-color: #e74200da;
 }
 
@@ -83,7 +93,6 @@ li.drop-down {
     min-width: 160px;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .2); 
     z-index: 1;
-    /* right: 0; */
 }
 
 .drop-content a {
@@ -109,12 +118,41 @@ li.drop-down {
 i {
     color: white;
     font-size: 32px;
-    /* margin: 0 12px 0 12px; */
 }
 
-#ul-head .li-float {
-    float: right;
+#main-social {
+    border: 1px solid red;
+    justify-self: flex-end;
+    margin-right: 0;
+    margin-left: auto;
 }
+
+label[for=toggle-home] {
+    position: fixed;
+    top: 15px;
+    left: 25px;
+    color: black;
+    z-index: 6;
+}
+
+.mobile-nav {
+    display: none;
+}
+
+.toggle {
+    display: none;
+}
+
+.fa-solid {
+    display: none;
+}
+
+
+
+
+
+
+
 
 body {
     background-color: #e74200da;
@@ -136,13 +174,6 @@ h1 {
 #container {
     width: 100vw;
     height: 100vh;
-    /* position: absolute;
-    top: 30%;
-    left: 30%; */
-    /* display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -155,11 +186,6 @@ h1 {
     flex-wrap: wrap;
     min-width: 100%;
     justify-content: center;
-    /* position: absolute;
-    top: 50%;
-    left: 50%; */
-    /* width: 500px;
-    height: 500px; */
 }
 
 #hdiv1 {
@@ -238,7 +264,77 @@ h1 {
     }
 }
 
-@media (max-width:850px) {
+@media (max-width:860px) {
+    #main-home {
+        display: none;
+    }
+
+    #main-header {
+        /* z-index: 99; */
+    }
+
+    #main-media {
+        margin-left: 100px;
+    }
+
+    label:nth-of-type(3) {
+        z-index: 15;
+    }
+
+    .fa-bars {
+        display: block;
+    }
+
+    #mob-nav {
+        position: relative;
+    }
+
+    #mob-home {
+        display: block;
+        background-color: black;
+        width: 150px;
+        height: 200px;
+        position: fixed;
+        top: -200px;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        margin: 0;
+        padding: 0;
+        transition: top 1s;
+        z-index: -1;
+    }
+
+    #mob-home .ul-head {
+        display: block;
+        list-style-type: none;
+        height: 200px;
+        width: 150px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0;
+    }
+
+    .ul-head li {
+        margin: 0;
+        padding: 0;
+    }
+
+    .ul-head li a {
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+
+
+    #toggle-home:checked ~ #mob-home{
+        top: 60px;
+
+    }
+
     h1 {
         font-size: 60px;
         line-height: 2;

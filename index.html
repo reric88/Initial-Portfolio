@@ -1,99 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfolio" />
+    <meta name="author" content="Eric Collard" />
+    <script src="https://kit.fontawesome.com/9fbf6c4d27.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Portfolio</title>
+  </head>
 
-<head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta name="description" content="Portfolio">
-   <meta name="author" content="Eric Collard">
-   <script src="https://kit.fontawesome.com/9fbf6c4d27.js"></script>
-    <link rel="stylesheet" href="styles.css">
-   <title>Portfolio</title>
-</head>
-<body>
-    <nav>
-        <div id="header">
-            <ul id="ul-head">
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-                <li class="drop-down">
-                    <a href="#" class="drop-btn">Projects</a>
-                    <div class="drop-content">
-                        <a href="">Photo-Site</a>
-                        <a href="">Recreate a Webpage </a>
-                        <a href="">Complete a Tutorial</a>
-                        <a href="">Video Background</a>
-                        <a href="">Code-Along Forum</a>
-                        <a href="">Wut We Eatin'?</a>
-                        <a href="">Full Webpage</a>
-                        <a href="">Le Pain Page</a>
-                    </div>
-                </li>
-                <li class="drop-down"><a href="#">Qualifications</a>
-                    <div class="drop-content">
-                        <a href="">Git Basics</a>
-                        <a href="">Intro to HTML</a>
-                        <a href="">Intro to CSS</a>
-                        <a href="">Intermediate CSS</a>
-                        <a href="">Bootstrap</a>
-                        <a href="">Javascript</a>
-                        <a href="">GML</a>
-                </li>
-                <li class="li-float"><a href=""><i class="fa-brands fa-github"></i></a></li>
-                <li class="li-float"><a href=""><i class="fa-brands fa-linkedin"></i></a></li>
-                <li class="li-float"><a href=""><i class="fa-brands fa-facebook"></i></a></li>
-                <li class="li-float"><a href=""><i class="fa-brands fa-instagram"></i></a></li>
-                <li class="li-float"><a href=""><i class="fa-brands fa-youtube"></i></a></li>
-            </ul>
-            <ul>
-                
-            </ul>
+  <body>
+    <nav id="main-nav">
+        <!-- <input type="checkbox" name="toggle-home" id="toggle-home"> -->
+      <div id="main-header">
+        <div id="main-home">
+          <ul class="ul-head">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
         </div>
+        <!-- <input type="checkbox" name="toggle-media" id="toggle-media"> -->
+        <div id="main-media">
+          <ul class="ul-head">
+            <li class="drop-down">
+              <a href="#" class="drop-btn">Projects</a>
+              <div class="drop-content">
+                <a href="">Photo-Site</a>
+                <a href="">Recreate a Webpage </a>
+                <a href="">Complete a Tutorial</a>
+                <a href="">Video Background</a>
+                <a href="">Code-Along Forum</a>
+                <a href="">Wut We Eatin'?</a>
+                <a href="">Full Webpage</a>
+                <a href="">Le Pain Page</a>
+              </div>
+            </li>
+
+            <li class="drop-down">
+              <a href="#">Qualifications</a>
+              <div class="drop-content">
+                <a href="">Git Basics</a>
+                <a href="">Intro to HTML</a>
+                <a href="">Intro to CSS</a>
+                <a href="">Intermediate CSS</a>
+                <a href="">Bootstrap</a>
+                <a href="">Javascript</a>
+                <a href="">GML</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- <input type="checkbox" name="toggle-social" id="toggle-social"> -->
+        <div id="main-social">
+          <ul class="ul-head">
+            <li class="li-float">
+              <a href=""><i class="fa-brands fa-github"></i></a>
+            </li>
+            <li class="li-float">
+              <a href=""><i class="fa-brands fa-linkedin"></i></a>
+            </li>
+            <li class="li-float">
+              <a href=""><i class="fa-brands fa-facebook"></i></a>
+            </li>
+            <li class="li-float">
+              <a href=""><i class="fa-brands fa-instagram"></i></a>
+            </li>
+            <li class="li-float">
+              <a href=""><i class="fa-brands fa-youtube"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
-    <div id="container">
-        <div id="hdiv-container">
-            <div id="hdiv1" class="break">
-                <h1 class="text-hollow">WebDevelopment</h1>
-            </div>
-            <div id="hdiv2">
-                <h1 class="text-solid">HTML</h1>
-            </div>
-            <div id="hdiv3">
-                <h1 class="text-hollow">Bootstrap</h1>
-            </div>
-            <div id="hdiv4" class="break">
-                <h1 class="text-hollow">JavaScript</h1>
-            </div>
-            <div id="hdiv5">
-                <h1 class="text-hollow">CSS</h1>
-            </div>
-            <div id="hdiv6">
-                <h1 class="text-solid">GML</h1>
-            </div>
-            <div id="hdiv7" class="break">
-            <h1 class="text-hollow">Graphic Design</h1>
-            </div>
+
+
+
+    <nav id="mob-nav">
+        <div id="header">
+        <input type="checkbox" name="toggle-home" id="toggle-home" class="toggle">
+        <div id="mob-home" class="mobile-nav">
+          <ul class="ul-head">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
         </div>
+        <input type="checkbox" name="toggle-media" id="toggle-media" class="toggle">
+        <div id="mob-media" class="mobile-nav">
+          <ul class="ul-head">
+            <li class="drop-down">
+              <a href="#" class="drop-btn">Projects</a>
+              <div class="drop-content">
+                <a href="">Photo-Site</a>
+                <a href="">Recreate a Webpage </a>
+                <a href="">Complete a Tutorial</a>
+                <a href="">Video Background</a>
+                <a href="">Code-Along Forum</a>
+                <a href="">Wut We Eatin'?</a>
+                <a href="">Full Webpage</a>
+                <a href="">Le Pain Page</a>
+              </div>
+            </li>
+
+            <li class="drop-down">
+              <a href="#">Qualifications</a>
+              <div class="drop-content">
+                <a href="">Git Basics</a>
+                <a href="">Intro to HTML</a>
+                <a href="">Intro to CSS</a>
+                <a href="">Intermediate CSS</a>
+                <a href="">Bootstrap</a>
+                <a href="">Javascript</a>
+                <a href="">GML</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <input type="checkbox" name="toggle-social" id="toggle-social" class="toggle">
+        <div id="mob-social" class="mobile-nav">
+          <ul class="ul-head">
+            <li class="li-float">
+              <a href=""><i class="fa-brands fa-github"></i></a>
+            </li>
+            <li class="li-float">
+              <a href=""><i class="fa-brands fa-linkedin"></i></a>
+            </li>
+            <li class="li-float">
+              <a href=""><i class="fa-brands fa-facebook"></i></a>
+            </li>
+            <li class="li-float">
+              <a href=""><i class="fa-brands fa-instagram"></i></a>
+            </li>
+            <li class="li-float">
+              <a href=""><i class="fa-brands fa-youtube"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+    </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="container">
+      <div id="hdiv-container">
+        <div id="hdiv1" class="break">
+          <h1 class="text-hollow">WebDevelopment</h1>
+        </div>
+        <div id="hdiv2">
+          <h1 class="text-solid">HTML</h1>
+        </div>
+        <div id="hdiv3">
+          <h1 class="text-hollow">Bootstrap</h1>
+        </div>
+        <div id="hdiv4" class="break">
+          <h1 class="text-hollow">JavaScript</h1>
+        </div>
+        <div id="hdiv5">
+          <h1 class="text-hollow">CSS</h1>
+        </div>
+        <div id="hdiv6">
+          <h1 class="text-solid">GML</h1>
+        </div>
+        <div id="hdiv7" class="break">
+          <h1 class="text-hollow">Graphic Design</h1>
+        </div>
+      </div>
     </div>
-    
-
-
-
-
-
-
-
-
-</body>
-<label for="toggle-social">
+  </body>
+  <label for="toggle-social">
     <i class="fa-solid fa-user-plus"></i>
-</label>
-<label for="toggle-media">
-    <i class="fa-regular fa-folder-open"></i>
-</label>
-<label for="toggle-home">
+  </label>
+  <label for="toggle-media">
+    <i class="fa-solid fa-folder-open"></i>
+  </label>
+  <label for="toggle-home">
+      <div id="home-rotate">
     <i class="fa-solid fa-bars"></i>
-</label>
+</div>
+  </label>
 </html>
