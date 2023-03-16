@@ -20,11 +20,13 @@
 
 
 
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'newRodin', Arial, Helvetica, sans-serif;
+    --main-orange: #ff480098;
 }
 
 .break {
@@ -247,10 +249,11 @@ h1 {
 #tab-container {
     width: 76%;
     margin: 0 auto;
+    padding: 0 auto;
     display: flex;
     justify-self: center;
-    justify-content: flex-start;
-    /* border: 1px solid red; */
+    justify-content: space-around;
+    border: 1px solid red;
 }
 
 /* #about-title {
@@ -291,7 +294,10 @@ h1 {
     border:2px solid #000;
     border-bottom: none;
     border-radius: 10px 10px 0 0;
-    overflow: hidden;}
+    overflow: hidden;
+    margin-bottom: 0;
+    transition-duration: 300ms;
+}
 
     #contact-title, #placeholder-title {
         margin-left: 5px;
@@ -314,6 +320,8 @@ h1 {
 
 .a-tab {
     text-decoration: none;
+    z-index: 0;
+    margin: 0 auto;
 }
 
 .hide {
@@ -328,9 +336,42 @@ input[type="radio"] {
     display: block;
 }
 
+input[name=tab]:checked ~ .tab-title{
+    transform-origin: bottom center;
+    transform: scale(1.3);
+    transition-duration: 200ms;
+}
+/* 
+#about-btn:checked ~ .tab-title{
+    transform: scale(1.3);
+    transition-duration: 300ms;
+}
 
+#contact-btn:checked ~ .tab-title{
+    transform: scale(1.3);
+    margin: 0 0;
+    transition-duration: 300ms;
+}
 
+#placeholder-btn:checked ~ .tab-title{
+    transform-origin: bottom center;
+    transform: scale(1.3);
+    transition-duration: 300ms;
+} */
 
+input[name=tab]:checked ~ .tab-title .tab-text{
+    background-color: #e74200da;
+    mix-blend-mode:multiply;
+    /* color: #ffffff00;
+    -webkit-text-stroke: 2px black; */
+}
+
+/* #contact-btn:checked ~ .tab-title .tab-text{
+    background-color: #e74200da;
+    mix-blend-mode:multiply;
+     color: #ffffff00;
+    -webkit-text-stroke: 2px black; 
+} */
 
 
 
