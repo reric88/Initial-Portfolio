@@ -152,6 +152,7 @@
         <div id="hdiv1" class="break">
           <h1 class="text-hollow">WebDevelopment</h1>
         </div>
+        <br>
         <div id="hdiv2">
           <h1 class="text-solid">HTML</h1>
         </div>
@@ -182,10 +183,10 @@
 
 
 <div id="tab-container">
-    <a href="#" class="a-tab">
-    <label for="about-btn">
+  <a href="#" class="a-tab" onclick="show1(), typingText()" >
+      <label for="about-btn" class="active-label">
+        <input type="radio" name="tab" value="display-about" id="about-btn">
     <div id="about-title" class="tab-title">
-        <input type="radio" name="tab" value="display-about" onclick="show1()" id="about-btn" checked>
         <h2 class="tab-text">About</h2>
     </div>
 
@@ -194,17 +195,17 @@
 
 <a href="#" class="a-tab" for="tab">
     <label for="contact-btn">
+      <input type="radio" name="tab" value="display-contact" onclick="show2()" id="contact-btn">
     <div id="contact-title" class="tab-title">
-        <input type="radio" name="tab" value="display-contact" onclick="show2()" id="contact-btn">
         <h2 class="tab-text">Contact</h2>
     </div>
 </label>
 </a>
 
-<a href="#" class="a-tab" for="tab">
+<a href="#" class="a-tab" for="tab" onclick="show3(), placeType()">
     <label for="placeholder-btn">
+      <input type="radio" name="tab" value="display-placeholder" id="placeholder-btn">
     <div id="placeholder-title" class="tab-title">
-        <input type="radio" name="tab" value="display-placeholder" onclick="show3()" id="placeholder-btn">
         <h2 class="tab-text">Place</h2>
     </div>
 </label>
@@ -217,8 +218,48 @@
 
 
     <div id="textbox">
-        <p class="hide show" name="one" id="about-p" style="font-family:Arial, Helvetica, sans-serif;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur illo eaque delectus vel iusto tempora quibusdam voluptas animi magni? Sequi odit itaque consequatur repellendus quisquam illo maiores dicta rem voluptatum pariatur doloremque officiis, sit a facere vel laboriosam error, numquam ad beatae quibusdam? Sapiente adipisci molestiae nostrum facere. Vitae minus error doloribus nisi hic dignissimos tenetur fugiat excepturi, nihil, eos laborum eaque saepe iste a consequuntur mollitia ab porro deserunt. Harum quia minus non magnam totam obcaecati reprehenderit numquam odit provident commodi cumque deserunt minima ad vel, ex suscipit eum consequatur? Minima pariatur quos natus quam eum debitis nulla obcaecati.</p>
-        <p class="hide" name="two" id="contact-p" style="font-family: 'Courier New', Courier, monospace;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur illo eaque delectus vel iusto tempora quibusdam voluptas animi magni? Sequi odit itaque consequatur repellendus quisquam illo maiores dicta rem voluptatum pariatur doloremque officiis, sit a facere vel laboriosam error,</p>
+        <p class="hide show" name="one" id="about-p"></p>
+
+
+        <div id="contact-div" class="hide" name="two">
+          <div id="contact-div-title">
+          <h3>Get in touch!</h3>
+        </div>
+        <form action="">
+        <div class="label-container">
+          <label for="first-name">
+            <input type="text" name="first-name" class="contact-info contact-input" id="first-name" placeholder="First Name" required>
+          </label>
+        </div>
+    
+          <div class="label-container">
+            <label for="last-name">
+              <input type="text" name="last-name" class="contact-info contact-input" id="last-name" placeholder="Last Name" required>
+            </label>
+          </div>
+          <br>
+          <div class="label-container">
+            <label for="email">
+              <input type="email" name="email" class="contact-info contact-input" id="email" placeholder="Email" required>
+            </label>
+          </div>
+    
+          <div class="label-container">
+            <label for="organization">
+              <input type="text" name="organization" class="contact-info contact-input" id="organization" placeholder="Organization">
+            </label>
+          </div>
+
+          <div id="text-container">
+            <textarea name="comments" class="contact-input" id="comments" cols="14" rows="5" placeholder="Type your comments here."></textarea>
+          </div>
+          <button id="submit-btn">Submit!</button>
+        </form>
+        </div>
+
+
+
+        <p class="hide" name="three" id="placeholder-p"></p>
     </div>
 
 
@@ -279,6 +320,7 @@
 
 
   </body>
+  
 <div style="height:px;width:500px;transform:rotate(45deg);margin:300px auto;;"><p>This is just for scroll and background testing</p></div>
   
   <label for="toggle-social">
