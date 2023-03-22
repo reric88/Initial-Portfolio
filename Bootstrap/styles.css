@@ -1,0 +1,460 @@
+@font-face {
+  font-family: newRodin;
+  src: url(./../Typeface/NewRodin\ Pro\ B.otf);
+}
+
+@font-face {
+  font-family: newRodinB;
+  src: url(./../Typeface/NewRodin\ Pro\ B.otf);
+}
+
+@font-face {
+  font-family: newRodinUB;
+  src: url(./../Typeface/NewRodin\ Pro\ UB.otf);
+}
+
+@font-face {
+  font-family: newRodinEB;
+  src: url(./../Typeface/NewRodin\ Pro\ EB.otf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "newRodin";
+  color: white;
+  --nav-menu-color: #1d1d1d;
+}
+
+/* HIDING BREAKPOINTS */
+.ul-social-mobile, .mob-home, #mob-home-btn {
+  display: none;
+}
+
+
+
+
+
+/* HIDING CHECKBOXES */
+input[type=checkbox] {
+  display: none;
+}
+
+.menu-btn {
+  display: none;
+}
+
+
+
+
+
+/* BASE ATTRIBUTES */
+body {
+  background-color: #333;
+  width: 100vw;
+  overflow: hidden;
+  /* border: 2px solid pink; */
+}
+
+a {
+  text-decoration: none;
+}
+
+
+
+
+
+/* NAV BAR */
+nav {
+  position: absolute;
+  height: 60px;
+  width: 100%;
+  background-color: black;
+  /* border: 3px solid green; */
+}
+
+
+
+
+
+/* CONTAINER FOR NAVBAR CONTENT */
+ul {
+  list-style: none;
+}
+
+#ul-container {
+  width: 100%;
+  min-height: 60px;
+  padding: 0 10px;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  letter-spacing: 1px;
+  /* border: 2px solid red; */
+}
+
+
+
+
+
+/* HOME CONTENT */
+.home {
+  width: 25%;
+  height: 100%;
+  /* border: 1px solid red; */
+}
+
+.home-main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  line-height: 0;
+/* border: 1px solid red; */
+}
+
+.home-main-items{
+  width: 100px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .home li .main-items:last-child {
+  margin: 0;
+} */
+
+
+
+
+
+/* PROJECTS CONTENT */
+
+.projects {
+  width: 150px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid orange; */
+}
+
+label[for=project-btn] {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  /* border: 5px solid white; */
+  
+}
+
+.project-item {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding-top: 10px;
+  /* border: 5px solid white; */
+}
+
+
+
+
+
+/* QUALIFICATIONS CONTENT */
+.qualifications {
+  width: 200px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid yellow; */
+}
+
+label[for=qual-btn] {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  /* border: 5px solid white; */
+}
+.qual-item {
+  height: 100%;
+  width: 100%;
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  /* border: 5px solid white; */
+}
+
+
+/* DROPDOWN MENUS FOR PROJECTS AND QUALIFICATIONS */
+
+.item-wrapper {
+  position: absolute;
+  border: 2px solid blue;
+  height: fit-content;
+  top: 60px;
+  margin: 0 0px;
+  padding: 0;
+  overflow: hidden;
+}
+
+.project-menu {
+  margin-bottom: -260px;
+  width: 250px;
+  text-align: center;
+  background-color: var(--nav-menu-color);
+  transition: 400ms ease;
+}
+
+#project-btn:checked  ~ .project-item .item-wrapper .ul-sub-group {
+  margin-bottom: 0;
+  transition: 600ms ease;
+
+}
+
+#qual-btn:checked  ~ .qual-item .item-wrapper .ul-sub-group {
+  margin-bottom: 0;
+  transition: 600ms ease;
+
+}
+
+.qual-menu {
+  margin-bottom: -200px;
+  width: 150px;
+  text-align: center;
+  background-color: var(--nav-menu-color);
+  transition: 400ms ease;
+}
+
+.sub-items {
+  background-color: var(--nav-menu-color);
+  min-width: fit-content;
+}
+
+
+
+
+
+/* SOCIAL CONTENT */
+.ul-social {
+  width: 35%;
+  height: 60px;
+  border: 1px solid green;
+}
+
+.ul-social-condensed {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 50px;
+  line-height: 0;
+}
+
+.ul-social-condensed li {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+/* COLOR CHANGE ON HOVER */
+li:hover{
+  background-color: orangered;
+}
+
+
+
+li:hover ul {
+  display: block;
+}
+
+
+
+
+
+/* DEFAULT ICON SIZE AND PLACEMENT */
+.icon-mob {
+  font-size: 50px;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:1300px) {
+  .ul-social {
+    width: 100px;
+  }
+
+  .ul-social-condensed {
+    display: none;
+  }
+
+  .ul-social-mobile {
+    height: 60px;
+    /* padding-top: 5px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+label[for=social-btn] {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+  .mob-wrapper {
+    position: absolute;
+    height: fit-content;
+    width: 100px;
+    top: 60px;
+    right: 10px;
+    margin: 0 0;
+    overflow: hidden;
+    /* border: 2px solid blue; */
+  }
+  
+  .social-menu {
+    width: 100%;
+    background-color: var(--nav-menu-color);
+    margin-bottom: -800px;
+    line-height: 1.4;
+    transition: 400ms ease-in;
+    /* border: 1px solid red; */
+  }
+
+  #social-btn:checked  ~ .social-item .mob-wrapper .social-menu {
+    margin-bottom: 0;
+    transition: 600ms ease;
+  
+  }
+
+  .mob-items {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 8px;
+    font-size: 50px;
+  }
+
+.mob-items:last-child {
+  margin-bottom: 0;
+}
+}
+
+
+
+
+
+@media (max-width:900px) {
+  .home {
+    width: 100px;
+  }
+
+  .home-main {
+    display: none;
+  }
+
+  .mob-home {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+label[for=mob-home-btn] {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+
+
+.home-wrapper {
+        position: absolute;
+        height: fit-content;
+        width: 100px;
+        top: 60px;
+        left: 10px;
+        margin: 0;
+        overflow: hidden;
+      }
+      
+      .home-menu {
+        width: 100%;
+        background-color: var(--nav-menu-color);
+        margin-bottom: -800px;
+        line-height: 1.4;
+        transition: 400ms ease-in;
+      }
+      
+      #mob-home-btn:checked  ~ .home-item .home-wrapper .home-menu {
+        margin-bottom: 0;
+        transition: 600ms ease;
+      } 
+      
+      
+      .mob-home-item{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 8px;
+        font-size: 50px;
+      }
+        
+      .home-item:last-child {
+        margin-bottom: 0;
+      }
+      
+      
+      
+      
+
+
+
+
+}
